@@ -64,11 +64,11 @@ with col_map:
                 # c'est plus proche de la magie qu'autre chose mais bon amen hein
                 rk = rk.lower()
                 lst_ajt = []
-                st.markdown(rk)
-                st.markdown(fctfl.gener_mrk(rk))
+                #st.markdown(rk)
+                #st.markdown(fctfl.gener_mrk(rk))
                 for rek_amis_rk in fctfl.gener_mrk(rk):
                     lst_ajt.append(rek_amis_rk)
-                st.markdown(lst_ajt)
+                #st.markdown(lst_ajt)
                 for last_mrk in lst_ajt:
                     reks.add_child(
                         folium.Marker(
@@ -87,6 +87,7 @@ with col_map:
         with col_fl:
 
             st.title("Reko recentes :")
+
 
 
 
