@@ -68,16 +68,16 @@ with col_map:
                 for rek_amis_rk in fctfl.gener_mrk(rk):
                     lst_ajt.append(rek_amis_rk)
                     st.markdown(rek_amis_rk)
-                    for last_mrk in lst_ajt:
-                        reks.add_child(
-                            folium.Marker(
-                                location=last_mrk[1],
-                                tooltip=last_mrk[0],
-                                popup=last_mrk[2]
+                for last_mrk in lst_ajt:
+                    reks.add_child(
+                        folium.Marker(
+                            location=last_mrk[1],
+                            tooltip=last_mrk[0],
+                            popup=last_mrk[2]
     
     
-                            )
                         )
+                    )
 
 
 
@@ -86,6 +86,7 @@ with col_map:
         with col_fl:
 
             st.title("Reko recentes :")
+
 
 
 
