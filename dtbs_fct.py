@@ -47,7 +47,7 @@ def inscription(nom_user, mdp_inscr):
         add_to_table_user(nom_user, mdp_inscr)
         new_tbl(nom_user)
         st.markdown("bienvenue parmi nous !!!")
-        add_friend(nom_user, 'reko_inc', False)
+        #add_friend(nom_user, 'reko_inc', False)
 
 
 def add_to_table_user(nom, mdp):
@@ -153,5 +153,6 @@ def get_lst_reko_ami(user):
     for i in lst:
         bis.append(i.replace(",",''))
     return bis
+
 
 
