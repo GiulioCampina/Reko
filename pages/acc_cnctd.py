@@ -62,6 +62,7 @@ with col_map:
             for rk in dbts.get_lst_reko_ami(st.session_state.get("usnm")):
                 rk = rk.replace(' ', '')   # absolument essentiel, sinon ne reconnais pas le nom de la table ,
                 # c'est plus proche de la magie qu'autre chose mais bon amen hein
+                rk = rk.lower()
                 lst_ajt = []
                 for rek_amis_rk in fctfl.gener_mrk(rk):
                     lst_ajt.append(rek_amis_rk)
@@ -83,3 +84,4 @@ with col_map:
         with col_fl:
 
             st.title("Reko recentes :")
+
