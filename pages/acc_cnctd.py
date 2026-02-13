@@ -54,7 +54,7 @@ with col_map:
     with st.container(border=True):
         col_crt, col_fl = st.columns([4, 2])
         with col_crt:
-            m = folium.Map(location=[48.692054, 6.184417], zoom_start=16, tiles="Stadia.OSMBright")
+            m = folium.Map(location=[48.692054, 6.184417], zoom_start=16, tiles="OpenStreetMap")
             fp.Geocoder().add_to(m)
             fp.MousePosition().add_to(m)
             reks = folium.FeatureGroup(name="reks")
@@ -81,4 +81,5 @@ with col_map:
             sf.st_folium(m, width=725, returned_objects=[], feature_group_to_add=reks)
 
         with col_fl:
+
             st.title("Reko recentes :")
