@@ -42,10 +42,10 @@ with col_frd:
         st.header("Nouvelle Reko")
         st.markdown(""""Pour cela, rien de plus simple : placez votre curseur à l’endroit où vous voulez ajouter une reko, puis récupérez les coordonnées en bas à droite pour localiser votre reko.
         """"")
-        co_x = st.text_input("première coordonée en bas a droite ")
+        co_x = st.text_input("première coordonnée en bas a droite ")
         co_y = st.text_input("deuxieme coordonnée")
         trt = st.text_input("Titre de la reko")
-        dscp = st.text_input("Déscription du lieu. Alors : Reko ou pas reko ?!")
+        dscp = st.text_input("Description du lieu. Alors : Reko ou pas reko ?!")
         if st.button("ajouter la reko"):
             dbts.ajt_reko(st.session_state.get("usnm"),trt, co_x, co_y, dscp)
             st.markdown("reko ajoutée a votre liste")
@@ -86,6 +86,7 @@ with col_map:
         with col_fl:
 
             st.title("Reko recentes :")
+
 
 
 
