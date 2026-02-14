@@ -2,14 +2,14 @@ import streamlit as st
 import dtbs_fct as dbfc
 
 st.set_page_config(initial_sidebar_state="collapsed")
-st.title("Connecte toi a ton compte!")
+st.title("Connecte toi à ton compte!")
 
 
-usnm = st.text_input("pseudonyme")
+usnm = st.text_input("Pseudonyme")
 motdp = st.text_input("Mot de passe ")
 
 if usnm is None:
-    usnm = "giga_bug?"
+    usnm = "grosrelou"
 
 if st.button("Connexion"):
     if motdp == dbfc.get_mdp(usnm):
@@ -20,4 +20,5 @@ if st.button("Connexion"):
         st.markdown("Erreur de pseudonyme")
     else:
         st.markdown("Erreur de mot de passe")
+
 
