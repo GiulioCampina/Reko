@@ -14,7 +14,7 @@ col_frd, col_map = st.columns([3, 8])
 with col_frd:
     with st.container(border=True):
         st.header("Ajoute tes amis ici !")
-        rch = st.text_input("ecris le nom de ton amis et ensuite :red[clique sur la touche entrée]")
+        rch = st.text_input("Écris le nom de ton ami, puis :red[clique sur la touche entrée]")
         if dbts.user_exist(rch) is True:
             if dbts.deja_amis(st.session_state.get("usnm"), rch) is False:
                 st.text("tu peux ajouter " + rch)
@@ -24,12 +24,12 @@ with col_frd:
                     else:
                         dbts.add_friend(st.session_state.get("usnm"), rch, True)
             else:
-                st.markdown("vous etes deja amis avec cet utilisateur!")
+                st.markdown("Vous etes déjà amis avec cet utilisateur!")
         else:
             st.markdown("Aucun utilisateur sous le nom de "+rch)
 
     with st.container(border=True):
-        st.header("liste de tes amis:")
+        st.header("Liste de tes amis:")
         lst_amis = dbts.supabase.table("user_database").select('lst_frd').eq('username', st.session_state.get("usnm")).execute()
         afich_ams = ""
         for i in lst_amis:
@@ -40,13 +40,12 @@ with col_frd:
         st.markdown(afich_ams)
     with st.container(border=True):
         st.header("Nouvelle Reko")
-        st.markdown(""""pour cela rien de plus simple , placez votre curseur a l'endroit ou vous voulez ajouter 
-                    une reko, puis recuperez les coordonnées en bas a droite pour localiser votre reko
+        st.markdown(""""Pour cela, rien de plus simple : placez votre curseur à l’endroit où vous voulez ajouter une reko, puis récupérez les coordonnées en bas à droite pour localiser votre reko.
         """"")
         co_x = st.text_input("première coordonée en bas a droite ")
         co_y = st.text_input("deuxieme coordonnée")
         trt = st.text_input("Titre de la reko")
-        dscp = st.text_input("desription du lieu. Alors : Reko ou pas reko ?!")
+        dscp = st.text_input("Déscription du lieu. Alors : Reko ou pas reko ?!")
         if st.button("ajouter la reko"):
             dbts.ajt_reko(st.session_state.get("usnm"),trt, co_x, co_y, dscp)
             st.markdown("reko ajoutée a votre liste")
@@ -87,6 +86,7 @@ with col_map:
         with col_fl:
 
             st.title("Reko recentes :")
+
 
 
 
