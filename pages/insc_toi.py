@@ -1,7 +1,7 @@
 import streamlit as st
 import dtbs_fct
 st.set_page_config(initial_sidebar_state="collapsed")
-st.title("Bienvenue à bord , ton aventure sur :red[reko] débute ici")
+st.title("Bienvenue à bord, ton aventure sur :red[reko] débute ici")
 st.markdown("""
 
 
@@ -17,6 +17,7 @@ if st.button("S'inscrire:"):
 
 if st.button("Retour à la page d'accueille"):
     st.switch_page("page_one.py")
+
 
 
 
