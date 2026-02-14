@@ -15,7 +15,8 @@ inp_mdp = st.text_input("votre mot de passe")
 if st.button("S'inscrire:"):
     dtbs_fct.inscription(inp_nom, inp_mdp)
 
-if st.button("Retour à la page d'acceuille"):
+if st.button("Retour à la page d'accueille"):
     st.switch_page("page_one.py")
+
 
 
