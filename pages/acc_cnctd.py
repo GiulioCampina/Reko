@@ -51,7 +51,7 @@ with col_frd:
             st.markdown("reko ajoutée a votre liste")
 with col_map:
     with st.container(border=True):
-        col_crt, col_fl = st.columns([4, 2])
+        col_crt, col_fl = st.columns([7, 2])
         with col_crt:
             m = folium.Map(location=[48.692054, 6.184417], zoom_start=16, tiles="OpenStreetMap")
             fp.Geocoder().add_to(m)
@@ -86,6 +86,7 @@ with col_map:
         with col_fl:
 
             st.title("Reko recentes :")
+
 
 
 
