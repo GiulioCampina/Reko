@@ -44,7 +44,7 @@ with col_frd:
                     une reko, puis recuperez les coordonnées en bas a droite pour localiser votre reko
         """"")
         co_x = st.text_input("première coordonée en bas a droite ")
-        co_y = st.text_input("deuxieme coordonnée a gauche")
+        co_y = st.text_input("deuxieme coordonnée")
         trt = st.text_input("Titre de la reko")
         dscp = st.text_input("desription du lieu. Alors : Reko ou pas reko ?!")
         if st.button("ajouter la reko"):
